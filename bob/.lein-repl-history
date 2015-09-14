@@ -74,3 +74,8 @@ user=>
 (re-matches #"\s+" "   ")
 (re-matches #"\s+" "")
 (re-matches #"\s*" "")
+(re-pattern "\\d")
+(re-pattern "\\d" "a")
+(str "a" "b" "c"
+)
+(str "a" "b" "c")
