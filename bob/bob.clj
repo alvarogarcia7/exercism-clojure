@@ -1,7 +1,7 @@
 (ns bob)
 
 (defn- has-question? [question]
-  (<= 1 (count (filter #(= "?" %) (clojure.string/split question #"")))))
+  (re-matches #".*\?" question))
 
 (defn- is-shouting? [question]
   (not (re-matches #".*[a-z]+.*" question)))
