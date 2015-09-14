@@ -1,7 +1,7 @@
 (ns bob
   [:require [clojure.string :refer [trim]]])
 
-(defn- has-question? [question]
+(defn- ends-in-question? [question]
   (re-matches #".*\?" question))
 
 (defn- re-matches-contains [regex text]
@@ -17,7 +17,7 @@
 (defn response-for [question]
   (cond
     (is-shouting? question) "Whoa, chill out!"
-    (has-question? question) "Sure."
+    (ends-in-question? question) "Sure."
     (blank? question) "Fine. Be that way!"
     :else "Whatever."))
 
