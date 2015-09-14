@@ -11,8 +11,8 @@
   (and (re-matches-contains "[A-Z]+" text)
        (not (re-matches-contains "[a-z]+" text))))
 
-(defn- blank? [question]
-  (= "" (trim question)))
+(defn- blank? [text]
+  (= "" (trim text)))
 
 (defn response-for [question]
   (cond
