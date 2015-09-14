@@ -49,3 +49,17 @@ filter #(== "?" %) "hello"
 (<= 1 (count (filter #(= "?" %) (clojure.string/split "hel" #""))))
 (<= 1 (count (filter #(= "?" %) (clojure.string/split "hel?" #""))))
 (<= 1 (count (filter #(= "?" %) (clojure.string/split "hel??" #""))))
+(clojure.string/lower-case "AAA")
+user=> (<= 1 (count (filter #(= "?" %) (clojure.string/split "hel??" #""))))
+true
+user=> 
+user=> (<= 1 (count (filter #(= "?" %) (clojure.string/split "hel??" #""))))
+true
+user=> 
+(not (re-matches #"[a-z]+" "hello")))   
+(not (re-matches #"[a-z]+" "hello"))   
+(not (re-matches #"[a-z]+" "AAA"))
+(not (re-matches #"[a-z]+" "A99"))
+(not (re-matches #"[a-z]+" "a99"))
+(not (re-matches #".*[a-z]+.*" "a99"))
+(not (re-matches #".*[a-z]+.*" "A99"))
