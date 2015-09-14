@@ -1,4 +1,5 @@
-(ns bob)
+(ns bob
+  [:require [clojure.string :refer [trim]]])
 
 (defn- has-question? [question]
   (re-matches #".*\?" question))
@@ -11,7 +12,7 @@
        (not (re-matches-contains "[a-z]+" question))))
 
 (defn- blank? [question]
-  (= "" (clojure.string/trim question)))
+  (= "" (trim question)))
 
 (defn response-for [question]
   (cond
