@@ -4,12 +4,12 @@
 (defn- ends-in-question? [question]
   (re-matches #".*\?" question))
 
-(defn- re-matches-contains [regex text]
+(defn- re-contains [regex text]
   (re-matches (re-pattern (str ".*" regex ".*")) text))
 
 (defn- is-shouting? [text]
-  (and (re-matches-contains "[A-Z]+" text)
-       (not (re-matches-contains "[a-z]+" text))))
+  (and (re-contains "[A-Z]+" text)
+       (not (re-contains "[a-z]+" text))))
 
 (defn- blank? [text]
   (= "" (trim text)))
