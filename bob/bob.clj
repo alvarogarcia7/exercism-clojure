@@ -7,9 +7,9 @@
 (defn- re-matches-contains [regex text]
   (re-matches (re-pattern (str ".*" regex ".*")) text))
 
-(defn- is-shouting? [question]
-  (and (re-matches-contains "[A-Z]+" question)
-       (not (re-matches-contains "[a-z]+" question))))
+(defn- is-shouting? [text]
+  (and (re-matches-contains "[A-Z]+" text)
+       (not (re-matches-contains "[a-z]+" text))))
 
 (defn- blank? [question]
   (= "" (trim question)))
