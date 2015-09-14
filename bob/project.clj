@@ -3,5 +3,4 @@
   :url "https://github.com/exercism/xclojure/tree/master/bob"
   :source-paths [""]
   :test-paths [""]
-  :dependencies [[org.clojure/clojure "1.7.0"]]
-  :plugins [[quickie "0.4.0"]])
+  :dependencies [[org.clojure/clojure "1.7.0"]])
