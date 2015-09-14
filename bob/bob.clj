@@ -4,7 +4,8 @@
   (re-matches #".*\?" question))
 
 (defn- is-shouting? [question]
-  (not (re-matches #".*[a-z]+.*" question)))
+  (and (re-matches #".*[A-Z]+.*" question)
+       (not (re-matches #".*[a-z]+.*" question))))
 
    
 (defn response-for [question]
