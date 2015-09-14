@@ -1,2 +1,4 @@
 target
 *swp
+.lein-failures
+.nrepl-port
